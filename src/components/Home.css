@@ -1,0 +1,47 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Fasthand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
+
+.intro {
+  font-size: 20px;
+  margin: auto;
+  width: 70%;
+  padding-top: 100px;
+  font-family: "Playfair Display", serif;
+}
+.navBar {
+  display: flex;
+  align-items: center;
+  margin: 0px 10px 10px 10px;
+}
+.createAPostLink {
+  display: flex;
+  justify-content: right;
+  flex-grow: 1;
+  color: black;
+  font-family: "Playfair Display", serif;
+}
+.viewPostsLink {
+  display: flex;
+  color: black;
+  padding: 20px 40px 20px 20px;
+  font-family: "Playfair Display", serif;
+}
+.container {
+  background-color: #f6eded;
+  min-height: 800px;
+  padding: 40px;
+}
+.innerContainer {
+  background-color: #f2eeee;
+  min-height: 700px;
+  padding-top: 25px;
+  box-shadow: 10px 5px 5px #d4a7a7, -10px -5px 5px #d4a7a7;
+}
+
+.title {
+  padding-left: 40px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
