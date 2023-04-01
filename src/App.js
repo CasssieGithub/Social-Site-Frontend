@@ -2,10 +2,13 @@ import "./App.css";
 import {useState, useEffect} from 'react'
 import { Routes, Route } from "react-router-dom";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import axios from 'axios'
 =======
 import { useState, useEffect } from "react";
 >>>>>>> ed95e19002e8ba9fed0da2975ee640667281f8f5
+=======
+>>>>>>> d6812082cf377918a91bea43d9a04df94fc152bf
 import Home from "./components/Home";
 import Add from "./components/Add";
 import View from "./components/View";
@@ -15,6 +18,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const App = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [posts, setPosts] = useState([])
 
@@ -83,6 +87,8 @@ const App = () => {
       </div>
     </>
 >>>>>>> ed95e19002e8ba9fed0da2975ee640667281f8f5
+=======
+>>>>>>> d6812082cf377918a91bea43d9a04df94fc152bf
   );
 };
 

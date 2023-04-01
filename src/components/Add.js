@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 <<<<<<< HEAD
 import {useState} from 'react'
@@ -87,3 +88,6 @@ const Add = (props) => {
 };
 
 export default Add;
+=======
+import React from "react";
+>>>>>>> d6812082cf377918a91bea43d9a04df94fc152bf
