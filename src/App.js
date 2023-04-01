@@ -23,6 +23,23 @@ const App = () => {
     });
   };
 
+  const handleDelete = (deletedUser) => {
+    axios.delete('http://localhost:3000/users/' + deletedUser._id).then((response) => {
+      let newUsers = users.filter((user) => {
+        return user._id !== deletedUser._id
+      })
+      setUsers(newUsers)
+    })
+  }
+
+  const handleEdit = (data) => {
+    axios.put('http://localhost:3000/users/' + data._id, data).then((response) => {
+      let newUsers = users.map((user) => {
+        return user._id !== data._id ? user : data
+      })
+    })
+  }
+
   const getUsers = () => {
     axios
       .get("http://localhost:3000/users/")
