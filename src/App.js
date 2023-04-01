@@ -1,8 +1,10 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
+import User from "./components/User";
 import Home from "./components/Home";
 import Add from "./components/Add";
+import EditUser from "./components/EditUser";
 import View from "./components/View";
 import Profile from "./components/Profile";
 import Post from "./components/Post";
@@ -12,6 +14,17 @@ import { useNavigate } from "react-router-dom";
 const App = () => {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
+  const [posts, setPosts] = useState([])
+
+  const getUsers = () => {
+    axios
+      .get("http://localhost:3000/users")
+      .then(
+        (response) => setUsers(response.data),
+        (err) => console.log(err)
+      )
+      .catch((error) => console.log(error));
+  };
 
   const handleCreate = (data) => {
     axios.post("http://localhost:3000/users", data).then((response) => {
@@ -40,16 +53,6 @@ const App = () => {
     })
   }
 
-  const getUsers = () => {
-    axios
-      .get("http://localhost:3000/users/")
-      .then(
-        (response) => setUsers(response.data.users),
-        (err) => console.log(err)
-      )
-      .catch((error) => console.log(error));
-  };
-
   useEffect(() => {
     getUsers();
   }, []);
@@ -61,7 +64,7 @@ const App = () => {
           <Route path="/" element={<Home users={users} />} />
           <Route path="add" element={<Add handleCreate={handleCreate} />} />
           <Route path="viewposts" element={<View />} />
-          <Route path="profile/:userId" element={<Profile users={users} />} />
+          <Route path="profile/:userId" element={<Profile users={users._id} />} />
           <Route path="profile/:userId/post" element={<Post />} />
         </Routes>
       </div>
@@ -70,6 +73,21 @@ const App = () => {
 };
 
 export default App;
+
+// map for users to show all users and edit
+
+{/* <Add handleCreate={handleCreate}/>
+      {users.map((user) => {
+        return(
+          <>
+            <User user={user} />
+            <EditUser  user={user} handleEdit={handleEdit}/>
+            <button onClick={ () => {handleDelete(user)}}>Delete User</button>
+          </>
+        )
+      })} */}
+   
+
 
 // props.users.map;
 // {
