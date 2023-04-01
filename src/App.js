@@ -1,39 +1,41 @@
 import "./App.css";
 import {useState, useEffect} from 'react'
 import { Routes, Route } from "react-router-dom";
-import axios from 'axios'
 import Home from "./components/Home";
 import Add from "./components/Add";
 import View from "./components/View";
+import Profile from "./components/Profile";
+import Post from "./components/Post";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const App = () => {
-  const [posts, setPosts] = useState([])
-
-  const getPosts = () => {
-    axios.get('http://localhost:3000/posts').then((response) => setPosts(response.data), (err) => console.log(err))
-  }
-
-  const handleCreate = (data) => {
-    axios.post('http://localhost:3000/posts', data).then((response) => {
-      console.log(response);
-      let newPosts = [...posts, response.data]
-      setPosts(newPosts)
-    })
-  }
-
-  useEffect(() => {
-    getPosts()
-  }, [])
-
-  return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Home handleCreate={handleCreate}/>} />
-        <Route path="add" element={<Add />} />
-        <Route path="viewposts" element={<View />} />
-      </Routes>
-    </div>
   );
 };
 
 export default App;
+
+// props.users.map;
+// {
+//   log.map((log) => {
+//     return (
+//       <>
+//         <Log log={log} />
+//         <Edit log={log} handleEdit={handleEdit} />
+//         <br />
+
+//         <div className="container">
+//           <div className="PreviousMeals">
+//             <button
+//               onClick={() => {
+//                 handleDelete(log);
+//               }}
+//             >
+//               Delete
+//             </button>
+//           </div>
+//         </div>
+//       </>
+//     );
+//   });
+// }
