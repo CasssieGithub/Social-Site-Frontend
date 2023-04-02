@@ -1,0 +1,106 @@
+.createProfileTitle {
+  font-size: 25px;
+}
+
+.nameInput {
+  min-height: 25px;
+  min-width: 300px;
+}
+.genderInput {
+  min-height: 25px;
+  min-width: 300px;
+}
+.imageInput {
+  min-height: 25px;
+  min-width: 300px;
+}
+.ageInput {
+  min-height: 25px;
+  min-width: 300px;
+}
+.bioTextArea {
+  min-height: 200px;
+  min-width: 299px;
+}
+
+.container {
+  background-color: #f2eeee;
+  padding-top: 25px;
+  font-family: "Playfair Display", serif;
+  min-height: 700px;
+}
+.name {
+  font-size: 22px;
+}
+.gender {
+  font-size: 22px;
+}
+.image {
+  font-size: 22px;
+}
+.age {
+  font-size: 22px;
+  text-align: left;
+}
+.bio {
+  font-size: 22px;
+  text-align: left;
+}
+
+.leftSideOfPageContainer {
+  text-align: left;
+  margin: 25px;
+}
+.rightSideOfPageContainer {
+  text-align: right;
+  margin: 25px;
+}
+.addingANewUser {
+  margin: 50px;
+}
+.containsLeftRightAndSubmit {
+  text-align: right;
+}
+.containsBothLeftAndRightSides {
+  display: flex;
+  justify-content: center;
+}
+.submitBtnContainer {
+  width: 50%;
+  margin: auto;
+}
+.submitBtn {
+  width: 100%;
+  min-height: 40px;
+  font-size: 20px;
+}
+
+.submitBtn:hover {
+  text-decoration: double;
+  font-size: 23px;
+  font-size-adjust: 5px;
+  background-color: #e2cccc;
+}
+
+.leftSideOfPageName {
+  padding-bottom: 20px;
+}
+.leftSideOfPageGender {
+  padding-bottom: 20px;
+}
+.leftSideOfPageImage {
+  padding-bottom: 20px;
+}
+.rightSideOfPageAge {
+  padding-bottom: 20px;
+}
+.rightSideOfPageBio {
+  padding-bottom: 20px;
+}
+
+/* still working on this */
+/* .outsidecontainer {
+  background-color: #ac9f9f66;
+  min-height: 800px;
+  padding: 40px
+} */
