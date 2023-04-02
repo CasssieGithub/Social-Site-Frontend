@@ -17,7 +17,7 @@ const Add = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.handleCreate(userProfile);
+    props.handleCreateUser(userProfile);
     setUserProfile({
       name: "",
     });

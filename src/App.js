@@ -26,7 +26,7 @@ const App = () => {
       .catch((error) => console.log(error));
   };
 
-  const handleCreate = (data) => {
+  const handleCreateUser = (data) => {
     axios.post("http://localhost:3000/users", data).then((response) => {
       let newUser = [...users, response.data];
       setUsers(newUser);
@@ -36,7 +36,7 @@ const App = () => {
     });
   };
 
-  const handleDelete = (deletedUser) => {
+  const handleDeleteUser = (deletedUser) => {
     axios.delete('http://localhost:3000/users/' + deletedUser._id).then((response) => {
       let newUsers = users.filter((user) => {
         return user._id !== deletedUser._id
@@ -45,11 +45,47 @@ const App = () => {
     })
   }
 
-  const handleEdit = (data) => {
+  const handleEditUser = (data) => {
     axios.put('http://localhost:3000/users/' + data._id, data).then((response) => {
       let newUsers = users.map((user) => {
         return user._id !== data._id ? user : data
       })
+      setUsers(newUsers)
+    })
+  }
+  const getPosts = () => {
+    axios
+      .get("http://localhost:3000/posts")
+      .then(
+        (response) => setPosts(response.data),
+        (err) => console.log(err)
+      )
+      .catch((error) => console.log(error))
+  }
+
+  const handleCreatePost = (data) => {
+    axios.post("http://localhost:3000/posts", data).then((response) => {
+      let newPost = [...posts, response.data]
+      setPosts(newPost)
+      console.log(response.data)
+    })
+  }
+
+  const handleDeletePost = (deletedPost) => {
+    axios.delete('http://localhost:3000/posts/' + deletedPost._id).then((response) => {
+      let newPost = users.filter((post) => {
+        return post._id !== deletedPost._id
+      })
+      setPosts(newPost)
+    })
+  }
+
+  const handleEditPost = (data) => {
+    axios.put('http://localhost:3000/posts/' + data._id, data).then((response) => {
+      let newPost = users.map((post) => {
+        return post._id !== data._id ? post : data
+      })
+      setPosts(newPost)
     })
   }
 
@@ -62,10 +98,10 @@ const App = () => {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home users={users} />} />
-          <Route path="add" element={<Add handleCreate={handleCreate} />} />
+          <Route path="add" element={<Add handleCreateUser={handleCreateUser} />} />
           <Route path="viewposts" element={<View />} />
           <Route path="profile/:userId" element={<Profile users={users._id} />} />
-          <Route path="profile/:userId/post" element={<Post />} />
+          <Route path="post" element={<Post handleCreatePost={handleCreatePost} />} />
         </Routes>
       </div>
     </>
