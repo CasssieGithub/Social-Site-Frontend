@@ -44,7 +44,10 @@ const App = () => {
     axios
       .get("http://localhost:3000/users/")
       .then(
-        (response) => setUsers(response.data.users),
+        (response) => {
+          // console.log(response.data);
+          setUsers(response.data);
+        },
         (err) => console.log(err)
       )
       .catch((error) => console.log(error));

@@ -1,24 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+
 const Home = (props) => {
   return (
     <>
       <div>
-        <div className="container">
+        <div className="outsidecontainer">
           <div className="innerContainer">
             <nav className="navBar">
-              <div className="title">
-                <h1>Welcome to Social Site</h1>
+              <div className="titleOfAppContainer">
+                <h1 className="titleOfApp">Welcome to Social Site</h1>
               </div>
               <Link className="createAUserLink" to="add">
                 Create an account
               </Link>
+
               {/* This code will be used for the view profilessss? or the users profile? . Do not erase. */}
               {/* <Link className="viewPostsLink" to="viewposts">
               View Postss
             </Link> */}
             </nav>
+
             <div className="containerForIntro">
               <p className="intro">
                 Hello there, welcome to our site!
@@ -36,17 +39,35 @@ const Home = (props) => {
               </p>
             </div>
           </div>
+          <div className="textBetweenContainers">
+            View profiles that recently joined!
+          </div>
+          <div className="containerToHoldUsersDisplayedOnHomePage">
+            <div className="eachOfTheUsers">
+              {props.users.map((user) => {
+                return (
+                  <>
+                    <div className="individualUsers">
+                      <Link
+                        className="nameAndAgeOnHomePage"
+                        to={`/profile/${user._id}`}
+                      >
+                        <img className="userImageOnHomePage" src={user.image} />
+                        <div className="usersNameOnHomePage">{user.name}</div>
+                        <div className="usersAgeOnHomePage">{user.age}</div>
+                      </Link>
+                    </div>
+                  </>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
-      {props.users.map((user) => {
-        return (
-          <>
-            <Link to={`/profile/${user._id}`}>{user.name}</Link>
-          </>
-        );
-      })}
     </>
   );
 };
 
 export default Home;
+
+// something in the users.get is not working.
