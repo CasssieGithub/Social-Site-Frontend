@@ -13,6 +13,11 @@ const Profile = (props) => {
     return userId === user._id;
   });
 
+  const findPostByUserId = props.posts.filter((post) => {
+    return userId === post.userId;
+  });
+  console.log(findPostByUserId);
+
   return (
     <div>
       <div className="containerOnProfilePage">
@@ -25,12 +30,12 @@ const Profile = (props) => {
               Home
             </Link>
 
-            <Link
+            {/* <Link
               className="addAPostLinkOnProfilePage"
               to={`/profile/${userId}/post`}
             >
               Add a post
-            </Link>
+            </Link> */}
           </div>
         </nav>
 
@@ -62,7 +67,20 @@ const Profile = (props) => {
               </div>
             </div>
 
-            <div className="containsAllThePosts">posts here</div>
+            <div className="containsAllThePosts">
+              posts here
+              {props.posts.map((post) => {
+                return (
+                  <>
+                    <div>
+                      <div>{post.userId}</div>
+                      <div>{post.date}</div>
+                      <div>{post.text}</div>
+                    </div>
+                  </>
+                );
+              })}
+            </div>
           </>
         ) : (
           <>Loading...</>
