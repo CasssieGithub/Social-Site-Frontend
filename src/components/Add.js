@@ -1,13 +1,15 @@
 import React from "react";
-import {useState} from 'react'
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Add.css";
 
 const Add = (props) => {
   const [userProfile, setUserProfile] = useState({
     name: "",
+    gender: "",
     age: "",
     image: "",
+    bio: "",
   });
 
   const handleChange = (event) => {
@@ -16,11 +18,13 @@ const Add = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.handleCreate(userProfile);
+    props.handleCreateUser(userProfile);
     setUserProfile({
       name: "",
+      gender: "",
       age: "",
       image: "",
+      bio: "",
     });
   };
 
@@ -30,6 +34,15 @@ const Add = (props) => {
         <div className="container">
           <div className="createProfileTitle">
             <h1>Create a profile</h1>
+            <div className="instructionsToFillOutProfileInformation">
+              In order to create your profile we need some essential
+              information.
+              <br />
+              Please fill in the following information to start your new
+              profile.
+              <br />
+              This information can be changed later.
+            </div>
           </div>
           <div className="containerforInputInformation">
             <div className="addingANewUser">
@@ -42,7 +55,7 @@ const Add = (props) => {
                     <div className="leftSideOfPageName">
                       <div className="name">
                         <div>
-                          <label htmlFor="name">Name:</label>
+                          <label htmlFor="name">User Id:</label>
                         </div>
                         <input
                           className="nameInput"
@@ -116,13 +129,17 @@ const Add = (props) => {
                 <div className="submitBtnContainer">
                   <input className="submitBtn" type="submit" />
                 </div>
-                {/* This link below will take you to the users new profile. */}
-                {/* <Link to="/profile">Submit</Link> */}
               </form>
+            </div>
+            <div className="alreadyHaveAnAccountLinkContainer">
+              <Link className="alreadyHaveAnAccountLink" to="/">
+                Already have an account?
+              </Link>
             </div>
           </div>
         </div>
       </>
     </>
-  )
-  }
+  );
+};
+export default Add;

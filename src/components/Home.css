@@ -1,13 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap");
-
 .intro {
   font-size: 20px;
   margin: auto;
   width: 70%;
-  padding-top: 100px;
+  padding-top: 50px;
   font-family: "Playfair Display", serif;
 }
 .navBar {
@@ -35,7 +30,7 @@
   padding: 40px;
 }
 .innerContainer {
-  background-color: #f2eeee;
+  background-color: #fffafa;
   min-height: 525px;
   padding-top: 25px;
   box-shadow: 10px 5px 5px #d4a7a7, -10px -5px 5px #d4a7a7;
@@ -78,7 +73,7 @@
   text-align: center;
   color: black;
   text-decoration: none;
-  background-color: #f2eeee;
+  background-color: #fffafa;
   min-height: 700px;
   padding-top: 25px;
   box-shadow: 10px 5px 5px #d4a7a7, -10px -5px 5px #d4a7a7;
@@ -88,17 +83,6 @@
   font-size: 40px;
   font-family: "Playfair Display", serif;
   padding: 40px;
-}
-.footer {
-  text-align: center;
-  color: black;
-  text-decoration: none;
-  background-color: #f2eeee;
-  min-height: 100px;
-  padding-top: 25px;
-  box-shadow: 10px 5px 5px #d4a7a7, -10px -5px 5px #d4a7a7;
-  margin-top: 30px;
-  font-family: "Playfair Display", serif;
 }
 
 .eachOfTheUsers {
@@ -155,4 +139,7 @@
 .twitter {
   text-decoration: none;
   color: black;
+}
+.greeting {
+  font-size: 18px;
 }

@@ -97,10 +97,18 @@
 .rightSideOfPageBio {
   padding-bottom: 20px;
 }
-
-/* still working on this */
-/* .outsidecontainer {
-  background-color: #ac9f9f66;
-  min-height: 800px;
-  padding: 40px
-} */
+.alreadyHaveAnAccountLink {
+  text-decoration: none;
+  color: black;
+}
+.alreadyHaveAnAccountLink:hover {
+  text-decoration: underline;
+  color: black;
+}
+.instructionsToFillOutProfileInformation {
+  font-size: 16px;
+  font-weight: unset;
+}
+.alreadyHaveAnAccountLinkContainer {
+  padding-bottom: 40px;
+}
