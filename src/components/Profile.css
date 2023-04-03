@@ -1,0 +1,131 @@
+.titleOfAppOnProfilePage {
+  padding-left: 40px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  border-bottom: 1px solid rgb(80, 80, 78);
+  width: 300px;
+  border-width: thin;
+  font-size: 27px;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+.titleOfAppOnProfilePageContainer {
+  padding-left: 40px;
+  border-bottom: 1px solid rgb(80, 80, 78);
+  width: 300px;
+  border-width: thin;
+}
+.profilePageNavBar {
+  display: flex;
+  align-items: center;
+  margin: 0px 20px 10px 20px;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.homeLinkOnProfilePage {
+  font-family: "Playfair Display", serif;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(80, 80, 78);
+  border-width: thin;
+  border-top: 1px solid black;
+  padding: 5px;
+  margin-right: 10px;
+}
+.addAPostLinkOnProfilePage {
+  font-family: "Playfair Display", serif;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(80, 80, 78);
+  width: 110px;
+  border-width: thin;
+  border-top: 1px solid black;
+  padding: 5px;
+}
+.homeLinkOnProfilePage:hover {
+  font-size: 18px;
+  font-size-adjust: 5px;
+}
+.addAPostLinkOnProfilePage:hover {
+  font-size: 18px;
+  font-size-adjust: 5px;
+}
+.greetingOnProfilePage {
+  font-size: 45px;
+  animation: fadeIn 5s;
+  text-align: center;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+  max-width: 100%;
+  font-family: "Playfair Display", serif;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.containsImageOnLeftProfilePage {
+  margin: 25px;
+  box-shadow: 10px 5px 5px #d4a7a7, -10px -5px 5px #d4a7a7;
+}
+.containsNameGenderAgeBioOnRightProfilePage {
+  text-align: left;
+  margin: 25px;
+  box-shadow: 10px 5px 5px #d4a7a7, -10px -5px 5px #d4a7a7;
+}
+.containsbothLeftAndRightSideOfProfilePage {
+  display: flex;
+}
+.imageOnProfilePage {
+  height: 400px;
+  width: 290px;
+}
+.containsAllThePosts {
+  margin: 25px;
+  box-shadow: 10px 5px 5px #d4a7a7, -10px -5px 5px #d4a7a7;
+  height: 500px;
+}
+.innerContainerOnProfilePage {
+  margin: 50px;
+}
