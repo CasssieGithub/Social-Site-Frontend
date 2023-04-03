@@ -55,25 +55,25 @@ const App = () => {
   }
   const getPosts = () => {
     axios
-      .get("http://localhost:3000/posts")
-      .then(
-        (response) => setPosts(response.data),
-        (err) => console.log(err)
+      .get(posts)
+      .then((response) => {
+        setPosts(response.data.posts)
+      } 
       )
       .catch((error) => console.log(error))
   }
 
   const handleCreatePost = (data) => {
-    axios.post("http://localhost:3000/posts", data).then((response) => {
-      let newPost = [...posts, response.data]
+    axios.post("http://localhost:3000/users/posts", data).then((response) => {
+      let newPost = [...posts, response.data.posts]
       setPosts(newPost)
-      console.log(response.data)
+      console.log(response.data.posts)
     })
   }
 
   const handleDeletePost = (deletedPost) => {
-    axios.delete('http://localhost:3000/posts/' + deletedPost._id).then((response) => {
-      let newPost = users.filter((post) => {
+    axios.delete('http://localhost:3000/users/posts/' + deletedPost._id).then((response) => {
+      let newPost = posts.filter((post) => {
         return post._id !== deletedPost._id
       })
       setPosts(newPost)
@@ -81,8 +81,8 @@ const App = () => {
   }
 
   const handleEditPost = (data) => {
-    axios.put('http://localhost:3000/posts/' + data._id, data).then((response) => {
-      let newPost = users.map((post) => {
+    axios.put('http://localhost:3000/users/posts/' + data._id, data).then((response) => {
+      let newPost = posts.map((post) => {
         return post._id !== data._id ? post : data
       })
       setPosts(newPost)
@@ -90,7 +90,7 @@ const App = () => {
   }
 
   useEffect(() => {
-    getUsers();
+    getUsers(getPosts());
   }, []);
 
   return (

@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 import { Routes, Route, useParams } from "react-router-dom";
 
 const Post = (props) => {
-  const [post, setPost] = useState({
+  const [userPost, setUserPost] = useState({
     text: '',
     image: '',
     link: ''
   })
 
   const handleChange = (event) => {
-    setPost({ ...post, [event.target.name]: event.target.value });
+    setUserPost({ ...userPost, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.handleCreatePost(post);
+    props.handleCreatePost(userPost);
   };
 
   let { userId } = useParams();
@@ -27,7 +27,7 @@ const Post = (props) => {
       <div>
         <form onSubmit={handleSubmit}>
           <label htmlFor='name'>Text</label>
-          <input type='text' name='text' onChange={handleChange} placeholder='share your thoughts' />
+          <input type='text' name='text' onChange={handleChange} placeholder='share your thoughts' value={userPost.text} />
           <br/>
           <br/>
           <label htmlFor='name'>Image</label>
