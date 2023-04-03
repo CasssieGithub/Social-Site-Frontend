@@ -26,7 +26,7 @@ const Post = (props) => {
 >>>>>>> f6274dbd5c01dc5b42d8076fcc68ed0ce7959549
   let { userId } = useParams();
   const [post, setPost] = useState({
-    userId: "",
+    userId: { userId },
     date: "",
     text: "",
   });
