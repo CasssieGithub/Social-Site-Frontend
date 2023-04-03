@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 const Post = (props) => {
   let { userId } = useParams();
   const [post, setPost] = useState({
-    userId: "",
+    userId: { userId },
     date: "",
     text: "",
   });

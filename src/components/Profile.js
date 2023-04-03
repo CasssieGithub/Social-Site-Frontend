@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import { Routes, Route, useParams } from "react-router-dom";
 import "./Profile.css";
 import Post from "./Post";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import EditPost from "./EditPost";
+// import { useState, useEffect } from "react";
+// import axios from "axios";
 
 const Profile = (props) => {
   let { userId } = useParams();
@@ -16,7 +17,7 @@ const Profile = (props) => {
   const findPostByUserId = props.posts.filter((post) => {
     return userId === post.userId;
   });
-  console.log(findPostByUserId);
+  // console.log(findPostByUserId);
 
   return (
     <div>
@@ -29,13 +30,6 @@ const Profile = (props) => {
             <Link className="homeLinkOnProfilePage" to="/">
               Home
             </Link>
-
-            {/* <Link
-              className="addAPostLinkOnProfilePage"
-              to={`/profile/${userId}/post`}
-            >
-              Add a post
-            </Link> */}
           </div>
         </nav>
 
@@ -62,14 +56,17 @@ const Profile = (props) => {
                   {/* <div className="ageOnProfilePage"> {findUserById.age}</div> */}
                   <div className="bioOnProfilePage">{findUserById.bio}</div>
                   <br />
-                  <Post handleCreatePost={props.handleCreatePost} />
+                  <Post
+                    handleCreatePost={props.handleCreatePost}
+                    handleDeletePost={props.handleDeletePost}
+                  />
                 </div>
               </div>
             </div>
 
             <div className="containsAllThePosts">
               posts here
-              {props.posts.map((post) => {
+              {findPostByUserId.map((post) => {
                 return (
                   <>
                     <div>
@@ -77,6 +74,18 @@ const Profile = (props) => {
                       <div>{post.date}</div>
                       <div>{post.text}</div>
                     </div>
+                    <button
+                      onClick={() => {
+                        props.handleDeletePost(post);
+                      }}
+                    >
+                      delete
+                    </button>
+
+                    <EditPost
+                      post={post}
+                      handleEditPost={props.handleEditPost}
+                    />
                   </>
                 );
               })}
