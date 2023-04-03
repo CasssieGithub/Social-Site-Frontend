@@ -6,10 +6,16 @@ import "./Add.css";
 const Add = (props) => {
   const [userProfile, setUserProfile] = useState({
     name: "",
+<<<<<<< HEAD
+    image: "",
+    age: 0,
+    gender: ""
+=======
     gender: "",
     age: "",
     image: "",
     bio: "",
+>>>>>>> f6274dbd5c01dc5b42d8076fcc68ed0ce7959549
   });
 
   const handleChange = (event) => {
@@ -31,6 +37,15 @@ const Add = (props) => {
   return (
     <>
       <>
+<<<<<<< HEAD
+        <div>
+          <h1>Create a profile here</h1>
+        </div>
+        <div>
+        <Link to={'/'}>Home</Link>
+        </div>
+=======
+>>>>>>> f6274dbd5c01dc5b42d8076fcc68ed0ce7959549
         <div className="container">
           <div className="createProfileTitle">
             <h1>Create a profile</h1>
@@ -126,6 +141,52 @@ const Add = (props) => {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
+                <input
+                  type="text"
+                  name="name"
+                  onChange={handleChange}
+                  value={userProfile.name}
+                />
+              </div>
+              <div>
+                <div>
+                  <label htmlFor="name">Image:</label>
+                </div>
+                <input
+                  type="url"
+                  name="image"
+                  onChange={handleChange}
+                  value={userProfile.image}
+                />
+              </div>
+              <div>
+                <div>
+                  <label htmlFor="name">Age:</label>
+                </div>
+                <input
+                  type="text"
+                  name="age"
+                  onChange={handleChange}
+                  value={userProfile.age}
+                />
+              </div>
+              <div>
+                <div>
+                  <label htmlFor="name">Gender:</label>
+                </div>
+                <input
+                  type="text"
+                  name="gender"
+                  onChange={handleChange}
+                  value={userProfile.gender}
+                />
+              </div>
+              <input type="submit" />
+              {/* This link below will take you to the users new profile. */}
+              {/* <Link to="/profile">Submit</Link> */}
+            </form>
+=======
                 <div className="submitBtnContainer">
                   <input className="submitBtn" type="submit" />
                 </div>
@@ -136,10 +197,18 @@ const Add = (props) => {
                 Already have an account?
               </Link>
             </div>
+>>>>>>> f6274dbd5c01dc5b42d8076fcc68ed0ce7959549
           </div>
         </div>
       </>
     </>
+<<<<<<< HEAD
+  )
+  }
+
+  export default Add
+=======
   );
 };
 export default Add;
+>>>>>>> f6274dbd5c01dc5b42d8076fcc68ed0ce7959549

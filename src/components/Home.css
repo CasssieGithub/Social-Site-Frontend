@@ -1,17 +1,21 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Fasthand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
+
 .intro {
   font-size: 20px;
   margin: auto;
   width: 70%;
-  padding-top: 50px;
+  padding-top: 100px;
   font-family: "Playfair Display", serif;
 }
 .navBar {
   display: flex;
   align-items: center;
-  margin: 0px 20px 10px 20px;
-  justify-content: space-between;
+  margin: 0px 10px 10px 10px;
 }
-.createAPostLink {
+.createAUserLink {
   display: flex;
   justify-content: right;
   flex-grow: 1;
@@ -24,122 +28,20 @@
   padding: 20px 40px 20px 20px;
   font-family: "Playfair Display", serif;
 }
-.outsidecontainer {
+.container {
   background-color: #f6eded;
   min-height: 800px;
   padding: 40px;
 }
 .innerContainer {
-  background-color: #fffafa;
-  min-height: 525px;
-  padding-top: 25px;
-  box-shadow: 10px 5px 5px #d4a7a7, -10px -5px 5px #d4a7a7;
-}
-
-.titleOfAppContainer {
-  padding-left: 40px;
-  border-bottom: 1px solid rgb(80, 80, 78);
-  width: 300px;
-  border-width: thin;
-}
-
-.titleOfApp {
-  padding-left: 40px;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  border-bottom: 1px solid rgb(80, 80, 78);
-  width: 300px;
-  border-width: thin;
-  font-size: 27px;
-  margin-bottom: 18px;
-  font-weight: normal;
-}
-
-.createAUserLink {
-  font-family: "Playfair Display", serif;
-  color: black;
-  text-decoration: none;
-  border-bottom: 1px solid rgb(80, 80, 78);
-  width: 200px;
-  border-width: thin;
-  border-top: 1px solid black;
-  padding: 5px;
-}
-.createAUserLink:hover {
-  font-size: 18px;
-  font-size-adjust: 5px;
-}
-.containerToHoldUsersDisplayedOnHomePage {
-  text-align: center;
-  color: black;
-  text-decoration: none;
-  background-color: #fffafa;
+  background-color: #f2eeee;
   min-height: 700px;
   padding-top: 25px;
   box-shadow: 10px 5px 5px #d4a7a7, -10px -5px 5px #d4a7a7;
-  display: flex;
-}
-.textBetweenContainers {
-  font-size: 40px;
-  font-family: "Playfair Display", serif;
-  padding: 40px;
 }
 
-.eachOfTheUsers {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 80px;
-  justify-content: space-evenly;
-}
-.individualUsers {
-  font-family: "Playfair Display", serif;
-  box-shadow: 1px 1px 5px #8b8585, 1px 1px 5px #8b8585;
-  margin: 15px 5px 5px 0px;
-  padding: 20px 20px 20px 20px;
-  border: 2px solid #8b8585;
-}
-.userImageOnHomePage {
-  height: 275px;
-  width: 235px;
-}
-.usersNameOnHomePage {
-  text-align: center;
-  display: flex;
-}
-
-.usersAgeOnHomePage {
-  text-align: center;
-  display: flex;
-}
-.nameAndAgeOnHomePage {
-  text-decoration: none;
-}
-.nameAndAgeOnHomePage:hover {
-  text-decoration: double;
-  font-size: 22px;
-  font-size-adjust: 5px;
-}
-.visitUsAt {
-  text-align: left;
-  font-size: 40px;
+.title {
   padding-left: 40px;
-  padding-top: 30px;
-}
-.theLinks {
-  font-size: 20px;
-}
-.youtubeChannel {
-  text-decoration: none;
-  color: black;
-}
-.linkedIn {
-  text-decoration: none;
-  color: black;
-}
-.twitter {
-  text-decoration: none;
-  color: black;
-}
-.greeting {
-  font-size: 18px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
 }
