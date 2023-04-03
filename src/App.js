@@ -14,21 +14,10 @@ const App = () => {
 
   const getUsers = () => {
     axios
-      .get("http://localhost:3000/users/")
+      .get("http://localhost:3000/users")
       .then(
         (response) => {
           setUsers(response.data);
-        },
-        (err) => console.log(err)
-      )
-      .catch((error) => console.log(error));
-  };
-  const getPost = () => {
-    axios
-      .get("http://localhost:3000/users/")
-      .then(
-        (response) => {
-          setPosts(response.data);
         },
         (err) => console.log(err)
       )
@@ -68,7 +57,7 @@ const App = () => {
 
   const getPosts = () => {
     axios
-      .get("http://localhost:3000/users/posts")
+      .get("http://localhost:3000/posts")
       .then(
         (response) => setPosts(response.data),
         (err) => console.log(err)
@@ -77,7 +66,7 @@ const App = () => {
   };
 
   const handleCreatePost = (data) => {
-    axios.post("http://localhost:3000/users/posts", data).then((response) => {
+    axios.post("http://localhost:3000/posts", data).then((response) => {
       let newPost = [...posts, response.data];
       setPosts(newPost);
       console.log(response.data);
@@ -86,7 +75,7 @@ const App = () => {
 
   const handleDeletePost = (deletedPost) => {
     axios
-      .delete("http://localhost:3000/users/posts/" + deletedPost._id)
+      .delete("http://localhost:3000/posts/" + deletedPost._id)
       .then((response) => {
         let newPost = users.filter((post) => {
           return post._id !== deletedPost._id;
@@ -97,7 +86,7 @@ const App = () => {
 
   const handleEditPost = (data) => {
     axios
-      .put("http://localhost:3000/users/posts/" + data._id, data)
+      .put("http://localhost:3000/posts/" + data._id, data)
       .then((response) => {
         let newPost = users.map((post) => {
           return post._id !== data._id ? post : data;
@@ -108,7 +97,10 @@ const App = () => {
 
   useEffect(() => {
     getUsers();
+    getPosts();
   }, []);
+
+  console.log(posts);
 
   return (
     <>
@@ -122,7 +114,11 @@ const App = () => {
           <Route
             path="profile/:userId"
             element={
-              <Profile users={users} handleCreatePost={handleCreatePost} />
+              <Profile
+                users={users}
+                posts={posts}
+                handleCreatePost={handleCreatePost}
+              />
             }
           />
         </Routes>

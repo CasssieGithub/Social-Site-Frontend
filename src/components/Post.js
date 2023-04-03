@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 import { Routes, Route, useParams } from "react-router-dom";
 import "./Post.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
 
 const Post = (props) => {
   let { userId } = useParams();
   const [post, setPost] = useState({
-    name: "",
+    userId: "",
     date: "",
     text: "",
   });
@@ -21,7 +20,7 @@ const Post = (props) => {
     event.preventDefault();
     props.handleCreatePost(post);
     setPost({
-      name: "",
+      userId: "",
       date: "",
       text: "",
     });
@@ -42,19 +41,19 @@ const Post = (props) => {
               type="text"
               name="date"
               onChange={handleChange}
-              value={userId.date}
+              value={post.date}
             />
           </div>
           <div className="nameOnProfilePage">
             <div>
-              <label htmlFor="name">User Id:</label>
+              <label htmlFor="userId">User Id:</label>
             </div>
             <input
               className="nameInputOnProfilePage"
               type="text"
-              name="name"
+              name="userId"
               onChange={handleChange}
-              value={userId.name}
+              value={post.userId}
             />
           </div>
           <div className="textOnProfilePage">
@@ -66,7 +65,7 @@ const Post = (props) => {
               type="text"
               name="text"
               onChange={handleChange}
-              value={userId.text}
+              value={post.text}
             ></textarea>
           </div>
           <button>Like Button</button>
