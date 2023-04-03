@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 const Post = (props) => {
   let { userId } = useParams();
   const [post, setPost] = useState({
-    userId: { userId },
+    userId: userId,
     date: "",
     text: "",
   });
@@ -18,9 +18,10 @@ const Post = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(post);
     props.handleCreatePost(post);
     setPost({
-      userId: "",
+      userId: userId,
       date: "",
       text: "",
     });
@@ -44,18 +45,7 @@ const Post = (props) => {
               value={post.date}
             />
           </div>
-          <div className="nameOnProfilePage">
-            <div>
-              <label htmlFor="userId">User Id:</label>
-            </div>
-            <input
-              className="nameInputOnProfilePage"
-              type="text"
-              name="userId"
-              onChange={handleChange}
-              value={post.userId}
-            />
-          </div>
+          <div className="nameOnProfilePage"></div>
           <div className="textOnProfilePage">
             <div>
               <label htmlFor="text">Post:</label>
@@ -68,7 +58,6 @@ const Post = (props) => {
               value={post.text}
             ></textarea>
           </div>
-          <button>Like Button</button>
           <div className="submitBtnContainerOnProfilePage">
             <input className="submitBtnOnProfilePage" type="submit" />
           </div>

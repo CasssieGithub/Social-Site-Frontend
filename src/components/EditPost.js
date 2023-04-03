@@ -17,13 +17,13 @@ const EditPost = (props) => {
       <details>
         <summary>Edit Post</summary>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="userId">User Id:</label>
+          {/* <label htmlFor="userId">User Id:</label>
           <input
             type="text"
             name="userId"
             onChange={handleChange}
             value={editPost.userId}
-          />
+          /> */}
           <br />
           <br />
           <label htmlFor="name">Date:</label>
