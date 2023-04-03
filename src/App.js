@@ -23,6 +23,7 @@ const App = () => {
       )
       .catch((error) => console.log(error));
   };
+  // console.log(users);
 
   const handleCreateUser = (data) => {
     axios.post("http://localhost:3000/users", data).then((response) => {
@@ -77,7 +78,7 @@ const App = () => {
     axios
       .delete("http://localhost:3000/posts/" + deletedPost._id)
       .then((response) => {
-        let newPost = users.filter((post) => {
+        let newPost = posts.filter((post) => {
           return post._id !== deletedPost._id;
         });
         setPosts(newPost);
@@ -88,7 +89,7 @@ const App = () => {
     axios
       .put("http://localhost:3000/posts/" + data._id, data)
       .then((response) => {
-        let newPost = users.map((post) => {
+        let newPost = posts.map((post) => {
           return post._id !== data._id ? post : data;
         });
         setPosts(newPost);
@@ -100,7 +101,7 @@ const App = () => {
     getPosts();
   }, []);
 
-  console.log(posts);
+  // console.log(posts);
 
   return (
     <>
@@ -118,6 +119,8 @@ const App = () => {
                 users={users}
                 posts={posts}
                 handleCreatePost={handleCreatePost}
+                handleDeletePost={handleDeletePost}
+                handleEditPost={handleEditPost}
               />
             }
           />
