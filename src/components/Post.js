@@ -30,7 +30,7 @@ const Post = (props) => {
   return (
     <div>
       {/* <Link to={`/profile/${userId}`}>My Post</Link> */}
-      <h1> Create a new post</h1>
+      <h1 className="createPostTitle"> Create a new post</h1>
       <form onSubmit={handleSubmit}>
         <div className="containsCreateANewPost">
           <div className="dateOnProfilePage">
@@ -45,7 +45,6 @@ const Post = (props) => {
               value={post.date}
             />
           </div>
-          <div className="nameOnProfilePage"></div>
           <div className="textOnProfilePage">
             <div>
               <label htmlFor="text">Post:</label>

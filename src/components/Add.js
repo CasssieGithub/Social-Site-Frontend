@@ -35,8 +35,7 @@ const Add = (props) => {
           <div className="createProfileTitle">
             <h1>Create a profile</h1>
             <div className="instructionsToFillOutProfileInformation">
-              In order to create your profile we need some essential
-              information.
+              In order to create your profile we need some personal information.
               <br />
               Please fill in the following information to start your new
               profile.
@@ -55,7 +54,7 @@ const Add = (props) => {
                     <div className="leftSideOfPageName">
                       <div className="name">
                         <div>
-                          <label htmlFor="name">User Id:</label>
+                          <label htmlFor="name">Name:</label>
                         </div>
                         <input
                           className="nameInput"

@@ -30,7 +30,7 @@
   border-width: thin;
   border-top: 1px solid black;
   padding: 5px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .addAPostLinkOnProfilePage {
   font-family: "Playfair Display", serif;
@@ -113,6 +113,7 @@
   text-align: left;
   margin: 25px;
   box-shadow: 10px 5px 5px #d4a7a7, -10px -5px 5px #d4a7a7;
+  font-family: "Playfair Display", serif;
 }
 .containsbothLeftAndRightSideOfProfilePage {
   display: flex;
@@ -124,8 +125,74 @@
 .containsAllThePosts {
   margin: 25px;
   box-shadow: 10px 5px 5px #d4a7a7, -10px -5px 5px #d4a7a7;
-  height: 500px;
+  min-height: 500px;
+  padding: 5px 0px 5px 0px;
 }
 .innerContainerOnProfilePage {
   margin: 50px;
+}
+.deleteBtnOnProfilePage {
+  margin-top: 10px;
+  font-family: "Playfair Display", serif;
+  padding: 5px;
+  cursor: pointer;
+  text-align: right;
+  margin-right: 50px;
+  width: 100px;
+  text-align: center;
+}
+
+.editBtnOnProfilePage {
+  margin-top: 10px;
+  font-family: "Playfair Display", serif;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dateAndtextOnProfilePage {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  flex-direction: column;
+}
+.holdingAllPostIndividually {
+  font-family: "Playfair Display", serif;
+  border-bottom: 1px solid rgb(80, 80, 78);
+  padding: 5px;
+  margin: 70px;
+  border-style: solid;
+  background-color: white;
+}
+.deleteBtnOnProfilePageContainer {
+  text-align: right;
+}
+.deleteBtnOnProfilePage:hover {
+  background-color: #eee4e4;
+  box-shadow: 0px 1px 0px #d4a7a7, 0px 0px 15px #d4a7a7;
+}
+.dateOnProfilePage {
+  font-size: 20px;
+}
+.postOnProfilePage {
+  min-height: 50px;
+  font-size: 23px;
+}
+.nameOnProfilePage {
+  font-size: 30px;
+}
+.bioOnProfilePage {
+  font-size: 17px;
+}
+.textUnderImage {
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+  border-width: thin;
+  padding: 5px;
+  background: none;
+  border-style: none;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(80, 80, 78);
+  border-top: 1px solid black;
+  margin-top: 50px;
+  font-size: 20px;
 }

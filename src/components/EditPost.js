@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./EditPost.css";
 
 const EditPost = (props) => {
   const [editPost, setEditPost] = useState({ ...props.post });
@@ -17,16 +18,11 @@ const EditPost = (props) => {
       <details>
         <summary>Edit Post</summary>
         <form onSubmit={handleSubmit}>
-          {/* <label htmlFor="userId">User Id:</label>
-          <input
-            type="text"
-            name="userId"
-            onChange={handleChange}
-            value={editPost.userId}
-          /> */}
           <br />
           <br />
-          <label htmlFor="name">Date:</label>
+          <label className="dateOnEditPostJs" htmlFor="name">
+            Date:
+          </label>
           <input
             type="text"
             name="date"
@@ -35,7 +31,9 @@ const EditPost = (props) => {
           />
           <br />
           <br />
-          <label htmlFor="name">Text:</label>
+          <label className="postOnEditPostJs" htmlFor="name">
+            Post:
+          </label>
           <input
             type="text"
             name="text"
@@ -44,7 +42,7 @@ const EditPost = (props) => {
           />
           <br />
           <br />
-          <button>Submit</button>
+          <button className="submitBtnOnEditPostJs">Submit</button>
         </form>
       </details>
     </>

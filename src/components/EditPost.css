@@ -1,0 +1,22 @@
+.dateOnEditPostJs {
+  padding-right: 20px;
+  font-size: 17px;
+}
+.postOnEditPostJs {
+  padding-right: 20px;
+  font-size: 17px;
+}
+
+.submitBtnOnEditPostJs {
+  margin-top: 10px;
+  font-family: "Playfair Display", serif;
+  padding: 5px;
+  cursor: pointer;
+  text-align: right;
+  width: 100px;
+  text-align: center;
+}
+.submitBtnOnEditPostJs:hover {
+  background-color: #eee4e4;
+  box-shadow: 0px 1px 0px #d4a7a7, 0px 0px 15px #d4a7a7;
+}

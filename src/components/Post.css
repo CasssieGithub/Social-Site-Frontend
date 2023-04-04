@@ -2,3 +2,24 @@
   min-height: 50px;
   min-width: 500px;
 }
+.createPostTitle {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+}
+.containsCreateANewPost {
+  font-size: 17px;
+}
+.dateInputOnProfilePage {
+  height: 25px;
+  width: 30%;
+}
+.submitBtnOnProfilePage {
+  margin-top: 10px;
+  font-family: "Playfair Display", serif;
+  padding: 5px;
+  cursor: pointer;
+}
+.submitBtnOnProfilePage:hover {
+  background-color: #eee4e4;
+  box-shadow: 0px 1px 0px #d4a7a7, 0px 0px 15px #d4a7a7;
+}

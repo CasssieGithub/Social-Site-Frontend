@@ -42,6 +42,7 @@ const Profile = (props) => {
             <div className="containsbothLeftAndRightSideOfProfilePage">
               <div className="containsImageOnLeftProfilePage">
                 <img className="imageOnProfilePage" src={findUserById.image} />
+                <button className="textUnderImage"> Edit profile</button>
               </div>
 
               <div className="containsNameGenderAgeBioOnRightProfilePage">
@@ -63,33 +64,41 @@ const Profile = (props) => {
                 </div>
               </div>
             </div>
-
-            <div className="containsAllThePosts">
-              posts here
-              {findPostByUserId.map((post) => {
-                return (
-                  <>
-                    <div>
-                      <div>{post.userId}</div>
-                      <div>{post.date}</div>
-                      <div>{post.text}</div>
-                    </div>
-                    <button
-                      onClick={() => {
-                        props.handleDeletePost(post);
-                      }}
-                    >
-                      delete
-                    </button>
-
-                    <EditPost
-                      post={post}
-                      handleEditPost={props.handleEditPost}
-                    />
-                  </>
-                );
-              })}
-            </div>
+            <>
+              <div className="containsAllThePosts">
+                <div className="containerAroundPosts">
+                  {findPostByUserId.map((post) => {
+                    return (
+                      <>
+                        <div className="holdingAllPostIndividually">
+                          <div className="dateAndtextOnProfilePage">
+                            <div className="dateOnProfilePage">{post.date}</div>
+                            <br />
+                            <div className="postOnProfilePage">{post.text}</div>
+                          </div>
+                          <div className="deleteBtnOnProfilePageContainer">
+                            <button
+                              className="deleteBtnOnProfilePage"
+                              onClick={() => {
+                                props.handleDeletePost(post);
+                              }}
+                            >
+                              Delete
+                            </button>
+                          </div>
+                          <div className="editBtnOnProfilePage">
+                            <EditPost
+                              post={post}
+                              handleEditPost={props.handleEditPost}
+                            />
+                          </div>
+                        </div>
+                      </>
+                    );
+                  })}
+                </div>
+              </div>
+            </>
           </>
         ) : (
           <>Loading...</>
