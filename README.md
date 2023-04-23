@@ -26,7 +26,7 @@ Social Media apps are built to allow people to connect and communicate online. T
 
 ## Installation Instructions
 1. Clone my repository git@github.com:CasssieGithub/Social-Site-Frontend.git
-2. cd into Portfolio
+2. cd into project_3-frontend
 3. npm install
 4. npm start
 
