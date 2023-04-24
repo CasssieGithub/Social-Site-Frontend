@@ -1,4 +1,4 @@
-# Welcome to my Social Site! 
+# Welcome to my Social Site
 
 ## Table of Contents
 - Description
